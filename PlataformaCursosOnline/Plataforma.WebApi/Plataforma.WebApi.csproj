@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Plataforma.Servico\Plataforma.Servico.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
