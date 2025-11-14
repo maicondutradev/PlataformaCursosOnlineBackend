@@ -26,8 +26,9 @@ namespace Plataforma.Repositorio
         public Curso ObterPorId(int id)
         {
             return _context.Cursos
-                   .Include(c => c.Aulas)
-                   .FirstOrDefault(c => c.Id == id);
+                           .Include(c => c.Modulos)
+                               .ThenInclude(m => m.Aulas)
+                           .FirstOrDefault(c => c.Id == id);
         }
         public void Atualizar(Curso curso)
         {

@@ -11,5 +11,6 @@ namespace Plataforma.Repositorio
 
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Aula> Aulas { get; set; }
+        public DbSet<Modulo> Modulos { get; set; }
     }
 }

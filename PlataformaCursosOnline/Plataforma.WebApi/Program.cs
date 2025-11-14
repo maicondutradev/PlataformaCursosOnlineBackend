@@ -29,6 +29,8 @@ builder.Services.AddScoped<ICursoRepositorio, CursoRepositorio>();
 builder.Services.AddScoped<ICursoServico, CursoServico>();
 builder.Services.AddScoped<IAulaRepositorio, AulaRepositorio>();
 builder.Services.AddScoped<IAulaServico, AulaServico>();
+builder.Services.AddScoped<IModuloRepositorio, ModuloRepositorio>();
+builder.Services.AddScoped<IModuloServico, ModuloServico>();
 
 var app = builder.Build();
 

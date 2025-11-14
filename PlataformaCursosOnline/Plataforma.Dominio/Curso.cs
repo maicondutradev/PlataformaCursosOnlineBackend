@@ -7,7 +7,7 @@
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
         public string ImagemUrl { get; set; }
-        public List<Aula> Aulas { get; set; } = new List<Aula>();
+        public List<Modulo> Modulos { get; set; } = new List<Modulo>();
         public Curso(string nome, string descricao, decimal preco, string imagemUrl)
         {
             Nome = nome;

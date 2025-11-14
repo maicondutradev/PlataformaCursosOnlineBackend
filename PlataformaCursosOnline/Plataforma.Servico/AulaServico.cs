@@ -21,8 +21,8 @@ namespace Plataforma.Servico
             if (string.IsNullOrWhiteSpace(aula.VideoUrl))
                 throw new Exception("A URL do vídeo é obrigatória.");
 
-            if (aula.CursoId <= 0)
-                throw new Exception("A aula deve estar associada a um curso válido.");
+            if (aula.ModuloId <= 0)
+                throw new Exception("A aula deve estar associada a um módulo válido.");
 
             _aulaRepositorio.Adicionar(aula);
         }
@@ -34,6 +34,9 @@ namespace Plataforma.Servico
                 throw new Exception("O nome da aula é obrigatório.");
             if (string.IsNullOrWhiteSpace(aula.VideoUrl))
                 throw new Exception("A URL do vídeo é obrigatória.");
+
+            if (aula.ModuloId <= 0)
+                throw new Exception("A aula deve estar associada a um módulo válido.");
 
             _aulaRepositorio.Atualizar(aula);
         }

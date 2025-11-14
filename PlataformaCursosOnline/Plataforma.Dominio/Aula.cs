@@ -8,9 +8,8 @@ namespace Plataforma.Dominio
         public string Nome { get; set; } = string.Empty;
         public string? DescricaoCurta { get; set; }
         public string VideoUrl { get; set; } = string.Empty;
-        public int CursoId { get; set; }
-
+        public int ModuloId { get; set; }
         [JsonIgnore]
-        public Curso? Curso { get; set; }
+        public Modulo? Modulo { get; set; }
     }
 }
