@@ -12,9 +12,9 @@ namespace Plataforma.Servico
             _repositorio = repositorio;
         }
 
-        public void CriarCurso(string nome, string descricao, decimal preco)
+        public void CriarCurso(string nome, string descricao, decimal preco, string imagemUrl)
         {
-            var curso = new Curso(nome, descricao, preco);
+            var curso = new Curso(nome, descricao, preco, imagemUrl);
             _repositorio.Adicionar(curso);
         }
 

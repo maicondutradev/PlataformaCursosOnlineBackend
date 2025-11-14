@@ -20,8 +20,8 @@ namespace Plataforma.WebApi.Controllers
         {
             try
             {
-                _servico.CriarCurso(curso.Nome, curso.Descricao, curso.Preco);
-                return Ok("Curso criado com sucesso!");
+                _servico.CriarCurso(curso.Nome, curso.Descricao, curso.Preco, curso.ImagemUrl);
+                return Ok(new { mensagem = "Curso criado com sucesso!" });
             }
             catch (Exception ex)
             {
@@ -54,7 +54,7 @@ namespace Plataforma.WebApi.Controllers
             try
             {
                 _servico.AtualizarCurso(curso);
-                return Ok(curso);
+                return Ok(new { mensagem = "Curso atualizado com sucesso!" });
             }
             catch (Exception ex)
             {

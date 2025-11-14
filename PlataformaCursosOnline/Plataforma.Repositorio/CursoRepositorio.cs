@@ -1,4 +1,5 @@
-﻿using Plataforma.Dominio;
+﻿using Microsoft.EntityFrameworkCore;
+using Plataforma.Dominio;
 
 namespace Plataforma.Repositorio
 {
@@ -24,7 +25,9 @@ namespace Plataforma.Repositorio
 
         public Curso ObterPorId(int id)
         {
-            return _context.Cursos.FirstOrDefault(c => c.Id == id);
+            return _context.Cursos
+                   .Include(c => c.Aulas)
+                   .FirstOrDefault(c => c.Id == id);
         }
         public void Atualizar(Curso curso)
         {

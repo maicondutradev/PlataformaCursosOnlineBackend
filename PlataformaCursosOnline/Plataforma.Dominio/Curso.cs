@@ -6,12 +6,14 @@
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
-
-        public Curso(string nome, string descricao, decimal preco)
+        public string ImagemUrl { get; set; }
+        public List<Aula> Aulas { get; set; } = new List<Aula>();
+        public Curso(string nome, string descricao, decimal preco, string imagemUrl)
         {
             Nome = nome;
             Descricao = descricao;
             Preco = preco;
+            ImagemUrl = imagemUrl;
         }
 
         public Curso() { }
