@@ -26,5 +26,24 @@ namespace Plataforma.Servico
 
             _aulaRepositorio.Adicionar(aula);
         }
+        public void Atualizar(Aula aula)
+        {
+            if (aula.Id <= 0)
+                throw new Exception("ID da aula inválido.");
+            if (string.IsNullOrWhiteSpace(aula.Nome))
+                throw new Exception("O nome da aula é obrigatório.");
+            if (string.IsNullOrWhiteSpace(aula.VideoUrl))
+                throw new Exception("A URL do vídeo é obrigatória.");
+
+            _aulaRepositorio.Atualizar(aula);
+        }
+
+        public void Remover(int id)
+        {
+            if (id <= 0)
+                throw new Exception("ID inválido.");
+
+            _aulaRepositorio.Remover(id);
+        }
     }
 }
